@@ -1,15 +1,4 @@
-interface IProducts {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
-
-interface ICart {
-  totalPrice: number;
-  products: IProducts[];
-}
-
+import { ICart } from "../../types/productsType";
 interface IAction {
   type: string;
   payload: any;
@@ -54,4 +43,4 @@ const cartReducer = (state: ICart, action: IAction) => {
       return state;
   }
 };
-export type { ICart, IProducts };
+export default cartReducer;
